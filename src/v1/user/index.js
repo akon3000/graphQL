@@ -5,7 +5,6 @@ const {
   GraphQLInt,
   GraphQLString
 } = require('graphql')
-const { graphqlExpress } = require('apollo-server-express')
 const request = require('../../utils/request')
 
 const UserInterface = new GraphQLObjectType({
@@ -41,6 +40,4 @@ const UserType = new GraphQLObjectType({
   }
 })
 
-module.exports = {
-  schema: new GraphQLSchema({ query: UserType })
-}
+module.exports = new GraphQLSchema({ query: UserType })

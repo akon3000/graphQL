@@ -9,8 +9,8 @@ class Request {
     return axios.get(`${this.baseAPI}${url}`).then((res) => res)
   }
 
-  post(url) {
-    return axios.post(`${this.baseAPI}${url}`).then((res) => res)
+  post(url, body) {
+    return axios.post(`${this.baseAPI}${url}`, body).then((res) => res)
   }
 }
 
